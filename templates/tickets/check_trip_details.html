@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>Check Trip Details</title>
-</head>
-<body>
-    <section class="container mt-4">
-        <h1>Trip Details</h1>
-        <p>Check the details of your trip</p>
-        <hr>
-        <p>From: <b>{{ form.origin.value }}</b></p>
-        <p>To: <b>{{ form.destination.value }}</b></p>
-        <p>Departure: <b>{{ form.departure_date.value }}</b></p>
-        <p>Return: <b>{{ form.return_date.value }}</b></p>
-        <hr>
-    </section>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block head_title %}
+    <title>Trip Details</title>
+{% endblock %}
+
+{% block content %}
+<section class="container mt-4">
+    <h1>Trip Details</h1>
+    <p>Check the details of your trip</p>
+    <hr>
+    <p>From: <b>{{ form.origin.value }}</b></p>
+    <p>To: <b>{{ form.destination.value }}</b></p>
+    <p>Departure: <b>{{ form.departure_date.value }}</b></p>
+    <p>Return: <b>{{ form.return_date.value }}</b></p>
+    <hr>
+</section>
+{% endblock %}
